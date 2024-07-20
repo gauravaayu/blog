@@ -20,7 +20,7 @@ const BlogPostList = () => {
       
       try {
         setLoading(true);
-        const  response = await axios.get(`https://newsapi.org/v2/everything?q=technology&page=${currentPage}&pageSize=10&apiKey=12d09de722844b60b582fea5de718a98`);
+        const  response = await axios.get(`https://newsapi.org/v2/everything?q=technology&page=${currentPage}&pageSize=10&apiKey=${process.env.REACT_APP_API_KEY}`);
         setPosts(response.data.articles);
         setTotalPages(Math.ceil(response.data.totalResults / 10));
         setLoading(false);
