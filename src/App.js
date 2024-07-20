@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
   return (
-    <Router>
+    <Router basename='/blog'>
       <Routes>
         <Route path="/" element={<BlogPostList />} />
         <Route path="/post/:id" element={<BlogPostDetails />} />
